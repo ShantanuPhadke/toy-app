@@ -21,7 +21,8 @@ init:
 	@echo "==> Done. Using: $$($(PY) -V)"
 
 test:
-	.venv/bin/python -m unittest discover -s app/tests
+	.venv/bin/python -m unittest discover -s app/tests && \
+.venv/bin/python -m unittest discover -s app/tests/atlas_generated
 
 run:
 	$(UVICORN) app.main:app --reload
