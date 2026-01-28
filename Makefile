@@ -22,7 +22,7 @@ init:
 
 test:
 	.venv/bin/python -m unittest discover -s app/tests && \
-.venv/bin/python -m unittest discover -s app/tests/atlas_generated
+.venv/bin/python -m unittest discover -s atlas/tests
 
 run:
 	$(UVICORN) app.main:app --reload
